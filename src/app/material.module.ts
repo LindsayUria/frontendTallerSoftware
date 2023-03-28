@@ -36,7 +36,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
       MatDialogModule,
       MatSelectModule,
       MatRadioModule,
-      MatExpansionModule
+      MatExpansionModule,
+      
     ];
 
 @NgModule({
@@ -45,6 +46,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     CommonModule,
     myModule
   ],
+
   exports: [
     myModule
   ]
