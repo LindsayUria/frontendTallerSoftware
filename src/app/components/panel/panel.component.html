@@ -3,19 +3,27 @@
     <table>
       <thead>
         <tr>
-          <th>ID</th>
+          <th>Número</th>
           <th>Nombre</th>
-          <th>Descripción</th>
+          <th>Asunto</th>
+          <th>Fecha</th>
+          <th>Hora</th>
           <th>Estado</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let solicitud of solicitudes">
-          <td>{{ solicitud.id }}</td>
+        <tr *ngFor="let solicitud of solicitudes" [ngClass]="solicitud.estado">
+          <td>{{ solicitud.numero }}</td>
           <td>{{ solicitud.nombre }}</td>
-          <td>{{ solicitud.descripcion }}</td>
-          <td>{{ solicitud.estado }}</td>
-        </tr>
-      </tbody>
-    </table>
+          <td>{{ solicitud.asunto }}</td>
+          <td>{{ obtenerFecha(solicitud.fecha) }}</td>
+          <td>{{ solicitud.hora }}</td>
+          <td>
+            <button (click)="cambiarEstado(solicitud, 'rechazado')" *ngIf="solicitud.estado !== 'rechazado'">Rechazar</button>
+            <button (click)="cambiarEstado(solicitud, 'aprobado')" *ngIf="solicitud.estado !== 'aprobado'">Aprobar</button>
+            <button (click)="cambiarEstado(solicitud, 'pendiente')" *ngIf="solicitud.estado !== 'pendiente'">Pendiente</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
   </div>
