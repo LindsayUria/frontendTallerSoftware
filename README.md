@@ -2,13 +2,19 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
 
+# Versions
+
+Angular CLI: 15.2.4
+Node: 18.15.0
+Package Manager: npm 9.6.2
+
 ## Dependencies
 
 Add Angular Material 'ng add @angular/material'
 
 ## Install dependencies NECESSARY TO USE ANGULAR
 
-Run `nom install` to install dependecies
+Run `npm install` to install dependecies
 
 ## Development server
 
