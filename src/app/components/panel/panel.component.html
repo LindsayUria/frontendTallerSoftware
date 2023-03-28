@@ -1,1 +1,21 @@
-<p>panel works!</p>
+<div class="panel">
+    <h2>Solicitudes</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let solicitud of solicitudes">
+          <td>{{ solicitud.id }}</td>
+          <td>{{ solicitud.nombre }}</td>
+          <td>{{ solicitud.descripcion }}</td>
+          <td>{{ solicitud.estado }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

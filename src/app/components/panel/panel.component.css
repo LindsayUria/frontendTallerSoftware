@@ -1,0 +1,28 @@
+.panel {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .panel h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .panel table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .panel table th {
+    text-align: left;
+    background-color: #eee;
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+  }
+  
+  .panel table td {
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+  }
+  
