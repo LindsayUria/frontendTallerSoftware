@@ -1,49 +1,49 @@
-<p>Agregar Publicaciones</p>
+
 
 <div class="container">
+  <figure class="text-center">
+    <blockquote class="blockquote">
+      <h1>Agregar Publicaciones</h1>
+    </blockquote>
+  </figure>
     <div class="row" >
       <div class="col-6">
         <mat-card flex flex-gt-xs="30">
-          <h2>Información de la Publicación</h2>
+          <figure class="text-center">
+            <h2>Información de la Publicación</h2>
+          </figure>
           <mat-card-content>
-           <form>
-             <div class="mb-6 mt-6">
-               <label class="block text-gray-700 text-sm font-semibold mb-2" for="codigo">Titulo de la Publicacion </label>
-                 <input
-                   class="text-sm appearance-none rounded w-full py-2 px-3 text-gray-700 bg-gray-100 leading-tight focus:outline-none focus:shadow-outline h-10"
-                   id="codigo"
-                   type="text" min="1" step="any"
-                   placeholder="Código"
-                   formControlName="tituloPubicacion"
-                 />
-             </div>
-             <div class="mb-6 mt-6">
-               <label class="block text-gray-700 text-sm font-semibold mb-2" for="codigo">Subtitulo de la Publicacion </label>
-                 <input
-                   class="text-sm appearance-none rounded w-full py-2 px-3 text-gray-700 bg-gray-100 leading-tight focus:outline-none focus:shadow-outline h-10"
-                   id="codigo"
-                   type="text" min="1" step="any"
-                   placeholder="Código"
-                   formControlName="subtituloPubicacion"
-                 />
-             </div>
-             <div class="mb-6 mt-6">
-               <label class="block text-gray-700 text-sm font-semibold mb-2" for="codigo">Titulo de la Publicacion </label>
-                 <input
-                   class="text-sm appearance-none rounded w-full py-2 px-3 text-gray-700 bg-gray-100 leading-tight focus:outline-none focus:shadow-outline h-10"
-                   id="codigo"
-                   type="text" min="1" step="any"
-                   placeholder="Código"
-                   formControlName="tituloPubicacion"
-                 />
-             </div>
-           </form>
+            <form>
+              <div class="mb-3">
+                <label for="titlePost" class="form-label">Título</label>
+                <input type="text" class="form-control" id="titlePost" placeholder="Agregue el título de la publicación">
+              </div>
+              <div class="mb-3">
+                <label for="subtitlePost" class="form-label">Subtítulo</label>
+                <input type="text" class="form-control" id="subtitlePost" placeholder="Agregue el subtítulo de la publicación">
+              </div>
+              <div class="mb-3">
+                <label for="descriptionPost" class="form-label">Descripción</label>
+                <textarea class="form-control" id="descriptionPost" rows="4" placeholder="Agregue la descripción de la publicación"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="imagesPost" class="form-label">Subir Imágenes</label>
+                <input class="form-control" type="file" id="imagesPost" multiple>
+              </div>
+              <div class="mb-3">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  Agregar Público Destino
+                </button>
+              </div>
+            </form>
           </mat-card-content>
         </mat-card>
       </div>
       <div class="col-6">
         <mat-card flex >
-          <h2>Vista Previa</h2>
+          <figure class="text-center">
+            <h2>Vista Previa</h2>
+          </figure>
           <mat-card-content>
               <p>Some content</p>
           </mat-card-content>
