@@ -11,6 +11,7 @@ Package Manager: npm 9.6.2
 ## Dependencies
 
 Add Angular Material 'ng add @angular/material'
+Add Bootstrap 'npm install bootstrap jquery popper.js'
 
 ## Install dependencies NECESSARY TO USE ANGULAR
 
