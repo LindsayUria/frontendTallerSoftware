@@ -1,5 +1,3 @@
-
-
 <div class="container">
   <figure class="text-center">
     <blockquote class="blockquote">
@@ -24,7 +22,7 @@
               </div>
               <div class="mb-3">
                 <label for="descriptionPost" class="form-label">Descripción</label>
-                <textarea class="form-control" id="descriptionPost" rows="4" placeholder="Agregue la descripción de la publicación"></textarea>
+                <textarea class="form-control" id="descriptionPost" rows="5" placeholder="Agregue la descripción de la publicación"></textarea>
               </div>
               <div class="mb-3">
                 <label for="imagesPost" class="form-label">Subir Imágenes</label>
@@ -34,6 +32,9 @@
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                   Agregar Público Destino
                 </button>
+              </div>
+              <div class="d-grid gap-2">
+                <button class="btn btn-success" type="button">Agregar Publicación</button>
               </div>
             </form>
           </mat-card-content>
@@ -50,5 +51,101 @@
         </mat-card>
       </div>
   </div>
-
+  <div class="modal modal-xl fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="staticBackdropLabel">Público Destino</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-6">
+              <h4>Añadir Categorias</h4>
+              <div class="row">
+                <div class="col-6">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="culture">
+                    <label class="form-check-label" for="culture">
+                      Cultura
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="art">
+                    <label class="form-check-label" for="art">
+                      Arte
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="sport">
+                    <label class="form-check-label" for="sport">
+                      Deporte
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="education">
+                    <label class="form-check-label" for="education">
+                      Educación
+                    </label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="courses">
+                    <label class="form-check-label" for="courses">
+                      Cursos
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="humanisticFormation">
+                    <label class="form-check-label" for="humanisticFormation">
+                      Formación Humanística
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="other">
+                    <label class="form-check-label" for="other">
+                      Otro
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <h4>Añadir Etiquetas</h4>
+              <input type="text" class="form-control" id="subtitlePost" placeholder="Añada etiquetas de la publicación">
+            </div>
+            <div class="col-6">
+              <h4>Edad Destino</h4>
+              <div class="row">
+                <div class="col-4">
+                  <select id="age1" class="form-select">
+                    <option selected>Choose...</option>
+                    <option>...</option>
+                  </select>
+                </div>
+                <div class="col-4">
+                  <p>Hasta:</p>
+                </div>
+                <div class="col-4">
+                  <select id="age2" class="form-select">
+                    <option selected>Choose...</option>
+                    <option>...</option>
+                  </select>
+                </div>
+              </div>
+              <h4>Público</h4>
+              <select id="age1" class="form-select">
+                <option selected>General</option>
+                <option>Estudiante</option>
+                <option>Docente</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Agregar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
