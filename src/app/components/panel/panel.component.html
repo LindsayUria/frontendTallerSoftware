@@ -12,16 +12,19 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let solicitud of solicitudes" [ngClass]="solicitud.estado">
+        <tr *ngFor="let solicitud of solicitudes" [ngClass]="solicitud.referencia">
           <td>{{ solicitud.numero }}</td>
           <td>{{ solicitud.nombre }}</td>
           <td>{{ solicitud.asunto }}</td>
           <td>{{ obtenerFecha(solicitud.fecha) }}</td>
           <td>{{ solicitud.hora }}</td>
           <td>
-            <button (click)="cambiarEstado(solicitud, 'rechazado')" *ngIf="solicitud.estado !== 'rechazado'">Rechazar</button>
-            <button (click)="cambiarEstado(solicitud, 'aprobado')" *ngIf="solicitud.estado !== 'aprobado'">Aprobar</button>
-            <button (click)="cambiarEstado(solicitud, 'pendiente')" *ngIf="solicitud.estado !== 'pendiente'">Pendiente</button>
+
+            <button class="btn-view-Detail" (click)="verDetalle(solicitud,  'Ver Detalle ')">Ver Detalle</button>
+
+
+
+
             </td>
           </tr>
         </tbody>

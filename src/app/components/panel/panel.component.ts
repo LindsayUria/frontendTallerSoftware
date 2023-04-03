@@ -6,6 +6,17 @@ interface Solicitud {
   asunto: string;
   fecha: Date;
   hora: string;
+  // referencia: 'Ver detalles de la publicacion';
+  referencia: string;
+}
+
+
+interface Detalle{
+  numero: number;
+  nombre: string;
+  asunto: string;
+  fecha: Date;
+  hora: string;
   estado: 'rechazado' | 'aprobado' | 'pendiente';
 }
 
@@ -23,7 +34,7 @@ export class PanelComponent {
       asunto: 'Solicitud de permiso',
       fecha: new Date(2023, 2, 27),
       hora: '14:30',
-      estado: 'pendiente'
+      referencia: 'Ver detalles de la publicacion'
     },
     {
       numero: 2,
@@ -31,7 +42,7 @@ export class PanelComponent {
       asunto: 'Solicitud de vacaciones',
       fecha: new Date(2023, 2, 28),
       hora: '10:00',
-      estado: 'aprobado'
+      referencia: 'Ver detalles de la publicacion'
     },
     {
       numero: 3,
@@ -39,14 +50,18 @@ export class PanelComponent {
       asunto: 'Solicitud de presupuesto',
       fecha: new Date(2023, 2, 28),
       hora: '16:15',
-      estado: 'rechazado'
+      referencia: 'Ver detalles de la publicacion'
     }
   ];
 
-  cambiarEstado(solicitud: Solicitud, nuevoEstado: 'rechazado' | 'aprobado' | 'pendiente') {
+  cambiarEstado(solicitud: Detalle, nuevoEstado: 'rechazado' | 'aprobado' | 'pendiente') {
     solicitud.estado = nuevoEstado;
   }
 
+
+  verDetalle(solicitud: Solicitud, verDetalle:'Ver Detalle '){
+    solicitud.referencia = verDetalle;
+  }
   obtenerFecha(fecha: Date): string {
     return fecha.toLocaleDateString();
   }
