@@ -1,30 +1,25 @@
 <div class="panel">
-    <h2>Solicitudes</h2>
-    <table>
+    <h2 class="title-panel" >Solicitudes</h2>
+    <table class="table">
       <thead>
-        <tr>
-          <th>Número</th>
-          <th>Nombre</th>
-          <th>Asunto</th>
-          <th>Fecha</th>
-          <th>Hora</th>
-          <th>Estado</th>
+        <tr class="tr-colum-indicadores">
+          <th class="th-ind-num" >Número</th>
+          <th class="th-ind">Nombre</th>
+          <th class="th-ind">Asunto</th>
+          <th class="th-ind">Fecha</th>
+          <th class="th-ind">Hora</th>
+          <th class="th-ind">Estado</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let solicitud of solicitudes" [ngClass]="solicitud.referencia">
-          <td>{{ solicitud.numero }}</td>
-          <td>{{ solicitud.nombre }}</td>
-          <td>{{ solicitud.asunto }}</td>
-          <td>{{ obtenerFecha(solicitud.fecha) }}</td>
-          <td>{{ solicitud.hora }}</td>
+        <tr class="tr-solicitudes" *ngFor="let solicitud of solicitudes" [ngClass]="solicitud.referencia">
+          <td class="tr-cont-num">{{ solicitud.numero }}</td>
+          <td class="tr-cont">{{ solicitud.nombre }}</td>
+          <td class="tr-cont">{{ solicitud.asunto }}</td>
+          <td class="tr-cont">{{ obtenerFecha(solicitud.fecha) }}</td>
+          <td class="tr-cont">{{ solicitud.hora }}</td>
           <td>
-
             <button class="btn-view-Detail" (click)="verDetalle(solicitud,  'Ver Detalle ')">Ver Detalle</button>
-
-
-
-
             </td>
           </tr>
         </tbody>
