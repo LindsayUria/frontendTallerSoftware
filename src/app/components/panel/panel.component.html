@@ -8,6 +8,7 @@
           <th class="th-ind">Asunto</th>
           <th class="th-ind">Fecha</th>
           <th class="th-ind">Hora</th>
+          <th class="th-ind">Detalle</th>
           <th class="th-ind">Estado</th>
         </tr>
       </thead>
@@ -18,14 +19,8 @@
           <td class="tr-cont">{{ solicitud.asunto }}</td>
           <td class="tr-cont">{{ obtenerFecha(solicitud.fecha) }}</td>
           <td class="tr-cont">{{ solicitud.hora }}</td>
-          <td>
-            <button class="btn-view-Detail" (click)="openPopup()">Ver Detalle</button>
-
-
-
-
-            </td>
-
+          <td><button class="btn-view-Detail" (click)="openPopup()">Ver Detalle</button></td>
+          <td class="tr-const-estados">{{solicitud.estados}}</td>
           </tr>
         </tbody>
       </table>

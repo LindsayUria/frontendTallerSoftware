@@ -9,6 +9,7 @@ interface Solicitud {
   hora: string;
   // referencia: 'Ver detalles de la publicacion';
   referencia: string;
+  estados: 'rechazado' | 'aprobado' | 'pendiente';
 }
 
 
@@ -49,7 +50,8 @@ export class PanelComponent {
       asunto: 'Solicitud de permiso',
       fecha: new Date(2023, 2, 27),
       hora: '14:30',
-      referencia: 'Ver detalles de la publicacion'
+      referencia: 'Ver detalles de la publicacion',
+      estados: 'pendiente',
     },
     {
       numero: 2,
@@ -57,7 +59,8 @@ export class PanelComponent {
       asunto: 'Solicitud de vacaciones',
       fecha: new Date(2023, 2, 28),
       hora: '10:00',
-      referencia: 'Ver detalles de la publicacion'
+      referencia: 'Ver detalles de la publicacion',
+      estados: 'aprobado',
     },
     {
       numero: 3,
@@ -65,7 +68,8 @@ export class PanelComponent {
       asunto: 'Solicitud de presupuesto',
       fecha: new Date(2023, 2, 28),
       hora: '16:15',
-      referencia: 'Ver detalles de la publicacion'
+      referencia: 'Ver detalles de la publicacion',
+      estados: 'rechazado',
     }
   ];
 

@@ -127,6 +127,26 @@
 }
 
 
+.status-message {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+}
+
+.accepted {
+  background-color: green;
+}
+
+.rejected {
+  background-color: red;
+}
+
+.in-review {
+  background-color: orange;
+}
+
 
 
 
