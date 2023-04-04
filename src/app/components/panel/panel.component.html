@@ -19,9 +19,17 @@
           <td class="tr-cont">{{ obtenerFecha(solicitud.fecha) }}</td>
           <td class="tr-cont">{{ solicitud.hora }}</td>
           <td>
-            <button class="btn-view-Detail" (click)="verDetalle(solicitud,  'Ver Detalle ')">Ver Detalle</button>
+            <button class="btn-view-Detail" (click)="openPopup()">Ver Detalle</button>
+
+
+
+
             </td>
+
           </tr>
         </tbody>
       </table>
+
+
+
   </div>

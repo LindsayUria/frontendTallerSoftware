@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 interface Solicitud {
   numero: number;
@@ -23,9 +24,23 @@ interface Detalle{
 @Component({
   selector: 'app-panel',
   templateUrl: './panel.component.html',
-  styleUrls: ['./panel.component.css']
+
+  styleUrls: ['./panel.component.css'],
+  template: `
+    <button class="btn-view-Detail" (click)="openPopup()">Ver Detalle</button>
+  `
+
+
 })
 export class PanelComponent {
+
+
+
+  constructor(private dialog: MatDialog) {}
+
+  openPopup() {
+    const dialogRef = this.dialog.open(Component);
+  }
 
   solicitudes: Solicitud[] = [
     {
