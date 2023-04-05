@@ -10,6 +10,7 @@ import { PanelComponent } from './components/panel/panel.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AddEventsComponent } from './components/add-events/add-events.component';
 
 
 
@@ -22,7 +23,8 @@ import { FooterComponent } from './components/footer/footer.component';
     InicioComponent,
     NavbarComponent,
     FooterComponent,
-   
+    AddEventsComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -30,11 +32,11 @@ import { FooterComponent } from './components/footer/footer.component';
     BrowserAnimationsModule,
     MaterialModule,
     AppRoutingModule,
-    
-    
-  
+
+
+
   ],
-  
+
   providers: [],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
