@@ -12,9 +12,6 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AddEventsComponent } from './components/add-events/add-events.component';
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,10 +28,7 @@ import { AddEventsComponent } from './components/add-events/add-events.component
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    AppRoutingModule,
-
-
-
+    AppRoutingModule
   ],
 
   providers: [],
