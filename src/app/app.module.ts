@@ -10,6 +10,8 @@ import { PanelComponent } from './components/panel/panel.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -22,7 +24,9 @@ import { FooterComponent } from './components/footer/footer.component';
     InicioComponent,
     NavbarComponent,
     FooterComponent,
-   
+
+
+
   ],
   imports: [
     BrowserModule,
@@ -30,11 +34,12 @@ import { FooterComponent } from './components/footer/footer.component';
     BrowserAnimationsModule,
     MaterialModule,
     AppRoutingModule,
-    
-    
-  
+    MatButtonModule,
+    MatDialogModule
+
+
   ],
-  
+
   providers: [],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],

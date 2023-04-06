@@ -37,17 +37,21 @@ import {MatExpansionModule} from '@angular/material/expansion';
       MatSelectModule,
       MatRadioModule,
       MatExpansionModule,
-      
+
     ];
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
+    MatButtonModule,
+    MatDialogModule,
     myModule
   ],
 
   exports: [
+    MatButtonModule,
+    MatDialogModule,
     myModule
   ]
 })
