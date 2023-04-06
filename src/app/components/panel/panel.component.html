@@ -19,7 +19,9 @@
           <td class="tr-cont">{{ solicitud.asunto }}</td>
           <td class="tr-cont">{{ obtenerFecha(solicitud.fecha) }}</td>
           <td class="tr-cont">{{ solicitud.hora }}</td>
-          <td><button class="btn-view-Detail" (click)="openPopup()">Ver Detalle</button></td>
+          <!–- Cambie openPopup() por openDialog –->
+          
+          <td><button class="btn-view-Detail" (click)="openDialog()">Ver Detalle</button></td>
           <td class="tr-const-estados">{{solicitud.estados}}</td>
           </tr>
         </tbody>

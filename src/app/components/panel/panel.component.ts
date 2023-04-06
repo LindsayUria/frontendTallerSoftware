@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Dialog } from '@angular/cdk/dialog';
+import {TodoDialogComponent} from '../../components/todo-dialog/todo-dialog.component'
 
 interface Solicitud {
   numero: number;
@@ -37,7 +39,10 @@ export class PanelComponent {
 
 
 
-  constructor(private dialog: MatDialog) {}
+  constructor(
+    private dialog: MatDialog,
+    private dialog2: Dialog
+    ) {}
 
   openPopup() {
     const dialogRef = this.dialog.open(Component);
@@ -83,6 +88,15 @@ export class PanelComponent {
   }
   obtenerFecha(fecha: Date): string {
     return fecha.toLocaleDateString();
+  }
+
+  openDialog(){
+    this.dialog2.open(TodoDialogComponent,{
+      height: '400px',
+  width: '600px',
+  panelClass: 'my-dialog',
+      
+    });
   }
 
 }
