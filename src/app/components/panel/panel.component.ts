@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Dialog } from '@angular/cdk/dialog';
 import {TodoDialogComponent} from '../../components/todo-dialog/todo-dialog.component'
+import { ViewPostsComponent } from './view-posts/view-posts.component';
 
 interface Solicitud {
   numero: number;
@@ -11,7 +12,7 @@ interface Solicitud {
   hora: string;
   // referencia: 'Ver detalles de la publicacion';
   referencia: string;
-  estados: 'rechazado' | 'aprobado' | 'pendiente';
+  estados: 'rechazado' | 'aprobado' | 'pendiente' | 'enviado';
 }
 
 
@@ -21,7 +22,7 @@ interface Detalle{
   asunto: string;
   fecha: Date;
   hora: string;
-  estado: 'rechazado' | 'aprobado' | 'pendiente';
+  estado: 'rechazado' | 'aprobado' | 'pendiente'| 'enviado';
 }
 
 @Component({
@@ -75,10 +76,19 @@ export class PanelComponent {
       hora: '16:15',
       referencia: 'Ver detalles de la publicacion',
       estados: 'rechazado',
+    },
+    {
+      numero: 4,
+      nombre: 'Amanda Ramirez',
+      asunto: 'Solicitud de publicacion',
+      fecha: new Date(2023, 2, 28),
+      hora: '19:55',
+      referencia: 'Ver detalles de la publicacion',
+      estados: 'enviado',
     }
   ];
 
-  cambiarEstado(solicitud: Detalle, nuevoEstado: 'rechazado' | 'aprobado' | 'pendiente') {
+  cambiarEstado(solicitud: Detalle, nuevoEstado: 'rechazado' | 'aprobado' | 'pendiente'| 'enviado') {
     solicitud.estado = nuevoEstado;
   }
 
@@ -90,12 +100,29 @@ export class PanelComponent {
     return fecha.toLocaleDateString();
   }
 
+
+  getEstadoClass(estado : String): String{
+
+    switch (estado) {
+      case 'aprobado':
+        return 'estado-aprobado';
+      case 'rechazado':
+        return 'estado-rechazado';
+      case 'pendiente':
+        return 'estado-pendiente';
+      case  'enviado':
+        return 'estado-enviado';
+      default:
+        return 'black';
+    }
+  }
+
   openDialog(){
-    this.dialog2.open(TodoDialogComponent,{
+    this.dialog2.open(ViewPostsComponent,{
       height: '400px',
   width: '600px',
   panelClass: 'my-dialog',
-      
+
     });
   }
 
