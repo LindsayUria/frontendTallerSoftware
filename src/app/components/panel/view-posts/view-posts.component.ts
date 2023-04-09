@@ -5,13 +5,13 @@ import { Component } from '@angular/core';
   selector: 'app-view-posts',
   templateUrl: './view-posts.component.html',
   styleUrls: ['./view-posts.component.css',
-
   ],
   styles: [` :host {
     display: block;
     background: #fff;
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 16px;
+    width:350px;
   }
 
   `]
