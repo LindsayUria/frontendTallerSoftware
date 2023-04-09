@@ -1,0 +1,10 @@
+/* CSS para los iconos de redes sociales */
+footer .list-inline-item a i {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #666;
+}
+
+footer .list-inline-item a:hover i {
+  color: #1abc9c;
+}

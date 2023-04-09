@@ -1,5 +1,8 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +19,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 
 
 import { AddEventsComponent } from './components/add-events/add-events.component';
+import { ViewPostsComponent } from './components/panel/view-posts/view-posts.component';
+import { ImageSliderComponent } from './image-slider/image-slider.component';
 
 @NgModule({
   declarations: [
@@ -25,9 +30,9 @@ import { AddEventsComponent } from './components/add-events/add-events.component
     InicioComponent,
     NavbarComponent,
     FooterComponent,
-
-
     AddEventsComponent,
+    ViewPostsComponent,
+    ImageSliderComponent,
 
   ],
   imports: [
@@ -38,7 +43,10 @@ import { AddEventsComponent } from './components/add-events/add-events.component
     AppRoutingModule,
     MatButtonModule,
     MatDialogModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule,
+    SlickCarouselModule,
+
   ],
 
   providers: [],

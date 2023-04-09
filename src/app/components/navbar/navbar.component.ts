@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+
+  sliderConfig = {
+    autoplay: true,
+    autoplaySpeed: 5000,
+    dots: true,
+    arrows: true
+  };
 }

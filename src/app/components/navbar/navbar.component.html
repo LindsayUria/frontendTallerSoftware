@@ -1,28 +1,28 @@
-<div class="nav">
-    <div class="nav-left">
-        <a class="nav-item" routerLink="/">
-        <img class="img-logo"src="https://www.ucb.edu.bo/wp-content/uploads/2023/02/BANNER-WEB-copia.jpg" alt="Logo">
-        </a>
+<!-- <ngb-carousel #carousel [showNavigationArrows]="false" [interval]="0" [keyboard]="true">
+  <ng-template ngbSlide *ngFor="let image of images">
+    <img src="{{ image.path }}" alt="Imagen">
+    <div class="carousel-caption">
+      <h3>{{ image.description }}</h3>
     </div>
-    
-    <span class="nav-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-    </span>
-    
-    <div class="nav-right">
+  </ng-template>
+</ngb-carousel> -->
 
-        <a class="nav-item" routerLink="/about">
-        About
-        </a>
-        <a class="nav-item" routerLink="./panel">
-        panel
-        </a>
-        <a class="nav-item" routerLink="/login">
-        Login
-        </a>
-        
-    </div>
-
+<div class="controls">
+  <!-- <button (click)="carousel.prev()" class="btn btn-primary">Anterior</button>
+  <button (click)="carousel.next()" class="btn btn-primary">Siguiente</button> -->
 </div>
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-button>Inicio</button>
+    <button mat-button routerLink="/panel">Panel</button>
+    <button mat-button>Quienes Somos</button>
+    <button mat-button>Blog</button>
+    <button mat-button>Contacto</button>
+    <span class="spacer"></span>
+    <button mat-icon-button>
+      <mat-icon>search</mat-icon>
+    </button>
+  </mat-toolbar-row>
+
+</mat-toolbar>

@@ -88,6 +88,13 @@
   font-size: 1.5rem;
   background-color:#004070;
   color: #ccc;
+  width: 30px;
+  height: 30px;
+  line-height: 60px;
+  margin-left: 25%;
+  border-radius: 50%;
+  display: inline;
+  margin-top:20%;
 
 
 
@@ -99,6 +106,7 @@
   color: black;
   font-size: 1.2rem;
   /*linea de las tablas*/
+  padding-top: 3%;
 }
 
 
