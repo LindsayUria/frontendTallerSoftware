@@ -2,7 +2,25 @@
   <button type="button" class="btn-close" aria-label="Close" style="float: right;" (click)="close()" ></button>
   <h1 class="text-x1">Vista Previa de la publicacion</h1>
     <p>ES ES UNA PRUEBA DEL CAMBIO DE COMPONENT </p>
-  <button type="button" class="btn btn-success" > aceptars</button>
+
+
+    <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+      <div>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" [(ngModel)]="name" required>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="email" required>
+      </div>
+      <div>
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" [(ngModel)]="message" required></textarea>
+      </div>
+      <button type="submit" [disabled]="!myForm.valid">Enviar</button>
+    </form>
+
+  <button type="button" class="btn btn-success" > aceptar</button>
   <button type="button" class="btn btn-danger">rechazar</button>
 </div>
 

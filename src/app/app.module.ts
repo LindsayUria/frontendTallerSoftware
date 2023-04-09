@@ -2,9 +2,8 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
-
-
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms'; // importa FormsModule
 import { AppComponent } from './app.component';
 import { AddPostsComponent } from './components/add-posts/add-posts.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,9 +14,6 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
-
-
-
 import { AddEventsComponent } from './components/add-events/add-events.component';
 import { ViewPostsComponent } from './components/panel/view-posts/view-posts.component';
 import { ImageSliderComponent } from './image-slider/image-slider.component';
@@ -37,6 +33,7 @@ import { ImageSliderComponent } from './image-slider/image-slider.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,

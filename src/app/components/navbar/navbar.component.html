@@ -1,36 +1,33 @@
-<!-- <ngb-carousel #carousel [showNavigationArrows]="false" [interval]="0" [keyboard]="true">
-  <ng-template ngbSlide *ngFor="let image of images">
-    <img src="{{ image.path }}" alt="Imagen">
-    <div class="carousel-caption">
-      <h3>{{ image.description }}</h3>
-    </div>
-  </ng-template>
-</ngb-carousel> -->
-
-<!-- <div class="controls"> -->
-  <!-- <button (click)="carousel.prev()" class="btn btn-primary">Anterior</button>
-  <button (click)="carousel.next()" class="btn btn-primary">Siguiente</button> -->
-<!-- </div> -->
-
-
-<!-- <div class="slider-container">
-  <div class="slider"> -->
-    <!-- Aquí van las imágenes -->
-    <!-- <img [src]="images[currentSlide]" alt="Imagen del carrusel"> -->
-  <!-- </div>
-  <div class="slider-controls">
-    <button (click)="prevSlide()">Anterior</button>
-    <button (click)="nextSlide()">Siguiente</button>
-  </div>
-  <div class="slider-indicators">
-    <span>{{ currentSlide + 1 }} de {{ images.length }}</span>
-  </div>
-</div> -->
+<!--
 
 <div class="slider">
   <div class="slider-container">
     <img [src]="images[currentSlide]" alt="Imagen del carrusel">
+
+  <div class="slider-indicators">
+    <div class="indicator-container">
+      <span *ngFor="let image of images; let i=index"
+            [ngClass]="{'active': i === currentSlide}"
+            (click)="goToSlide(i)"></span>
+
+    </div>
+</div>
   </div>
+
+
+  <div class="slider-controls">
+    <button (click)="prevSlide()">Anterior</button>
+    <button (click)="nextSlide()">Siguiente</button>
+  </div>
+</div>
+ -->
+
+
+ <div class="slider">
+  <div class="slider-container">
+    <img [src]="images[currentSlide]" alt="Imagen del carrusel">
+  </div> <!-- cierra slider-container -->
+
   <div class="slider-indicators">
     <div class="indicator-container">
       <span *ngFor="let image of images; let i=index"
@@ -38,22 +35,22 @@
             (click)="goToSlide(i)"></span>
     </div>
   </div>
-  <div class="slider-controls">
+
+  <!-- <div class="slider-controls">
     <button (click)="prevSlide()">Anterior</button>
     <button (click)="nextSlide()">Siguiente</button>
-  </div>
+  </div> -->
 </div>
 
 
 
-
-<mat-toolbar color="primary">
+<mat-toolbar class="nav" color="primary">
   <mat-toolbar-row>
-    <button mat-button>Inicio</button>
-    <button mat-button routerLink="/panel">Panel</button>
-    <button mat-button>Quienes Somos</button>
-    <button mat-button>Blog</button>
-    <button mat-button>Contacto</button>
+    <button class="btn-inicio" mat-button>Inicio</button>
+    <button class="btn-item" mat-button routerLink="/panel">Panel</button>
+    <button class="btn-item" mat-button>Quienes Somos</button>
+    <button class="btn-item" mat-button>Blog</button>
+    <button class="btn-item" mat-button>Contacto</button>
     <span class="spacer"></span>
     <button mat-icon-button>
       <mat-icon>search</mat-icon>

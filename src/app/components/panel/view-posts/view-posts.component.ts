@@ -20,6 +20,17 @@ import { Component } from '@angular/core';
 })
 
 export class ViewPostsComponent {
+
+  name!: string;
+  email!: string;
+  message!: string;
+
+  onSubmit() {
+    console.log('Formulario enviado');
+    console.log('Nombre:', this.name);
+    console.log('Email:', this.email);
+    console.log('Mensaje:', this.message);
+  }
   constructor(
     private dialogRef: DialogRef,
   ){}

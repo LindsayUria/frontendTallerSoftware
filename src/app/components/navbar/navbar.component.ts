@@ -50,4 +50,6 @@ export class NavbarComponent implements OnInit {
     dots: true,
     arrows: true
   };
+
+
 }

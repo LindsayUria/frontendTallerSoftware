@@ -153,8 +153,8 @@
 }
 
 .estado-pendiente{
-  background-color: #ffcc00;
-  opacity: 40%;
+  background-color: #004070;
+  opacity: 80%;
   border: none;
   color: black;
   padding-top:5%;
@@ -168,6 +168,7 @@
   font-family: Arial, sans-serif;
   font-weight: bold;
   color: white;
+  font-weight: bold;
 }
 
 
