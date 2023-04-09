@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
     background: #fff;
     border-radius: 4px;
     padding: 16px;
-    width:350px;
+    width:280px;
   }
 
   `]

@@ -1,22 +1,28 @@
 <mat-dialog-content>
+  <button mat-icon-button style="float: right;" (click)="close()" >
+    <mat-icon>close</mat-icon>
+  </button>
   <header>
-    <button type="button" class="btn-close" aria-label="Close" style="float: right;" (click)="close()" ></button>
-    <h1>Titulo de la peticion</h1>
+   <h1>Petición</h1>
   </header>
   <p><mat-form-field>
-    <input matInput placeholder="Descripcion">
-    <mat-icon matSuffix>person</mat-icon>
-  </mat-form-field>
+    <input matInput placeholder="Titulo">
+    <mat-icon matSuffix>title</mat-icon>
+  </mat-form-field></p>
   <p><mat-form-field>
-    <input matInput placeholder="Nombre">
-    <mat-icon matSuffix>drafts</mat-icon>
-  </mat-form-field>
-  </p>
+    <input matInput placeholder="Descripción">
+    <mat-icon matSuffix>description</mat-icon>
+  </mat-form-field></p>
+  <p><mat-form-field>
+    <input matInput placeholder="Fecha Evento">
+    <mat-icon matSuffix>event</mat-icon>
+  </mat-form-field></p>
+  
 </mat-dialog-content>
-<mat-dialog-action>
-  <button mat-raised-button color="primary">Aceptar</button>
-  <button mat-raised-button color="warn">Rechazar</button>  
-</mat-dialog-action>
+<div class="modal-footer">
+  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Rechazar</button>
+  <button type="button" class="btn btn-success">Aceptar</button>
+</div>
 
 
 

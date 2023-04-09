@@ -119,10 +119,7 @@ export class PanelComponent {
 
   openDialog(){
     this.dialog2.open(ViewPostsComponent,{
-      height: '400px',
-  width: '600px',
-  panelClass: 'my-dialog',
-
+      
     });
   }
 
