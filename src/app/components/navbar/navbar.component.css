@@ -1,17 +1,80 @@
-.carousel-caption {
+/*slider rcontenedor de imagenes mas indicadores*/
+.slider {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+
+/* contenedir de imagenes*/
+.slider-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+}
+/* imagenes del slider*/
+.slider-container img {
+  width: 100%;
+  height: 95%;
+
+  object-fit: cover;
+}
+
+
+.slider-indicators {
+  position: absolute;
+  bottom: 8px;
+
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.indicator-container {
+  display: flex;
+  justify-content: center;
+}
+
+.indicator-container span {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #0a0a0a;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.indicator-container span.active {
+  background-color: #333333;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.slider-controls button {
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
   color: white;
-}
-
-.controls {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.controls button {
+  border: none;
+  padding: 10px 20px;
   margin: 0 10px;
+  cursor: pointer;
 }
+
+.slider-controls button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
 nav {
   background-color: #004070;
   font-family: Arial, sans-serif;

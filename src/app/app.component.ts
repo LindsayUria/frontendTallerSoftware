@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TodoDialogComponent } from './components/todo-dialog/todo-dialog.component';
+//import { TodoDialogComponent } from './components/todo-dialog/todo-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
@@ -9,5 +9,5 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class AppComponent {
   title = 'frontend';
-  
+
 }

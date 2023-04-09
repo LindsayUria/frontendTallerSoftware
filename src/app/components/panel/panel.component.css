@@ -62,6 +62,7 @@
 .tr-colum-indicadores .th-ind{
   width:20%;
   background-color: #ffcc00;
+
   border:black;
   border-radius: 1px;
   font-size: 1.2rem;
@@ -153,6 +154,7 @@
 
 .estado-pendiente{
   background-color: #ffcc00;
+  opacity: 40%;
   border: none;
   color: black;
   padding-top:5%;

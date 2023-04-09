@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Dialog } from '@angular/cdk/dialog';
-import {TodoDialogComponent} from '../../components/todo-dialog/todo-dialog.component'
+//import {TodoDialogComponent} from '../../components/todo-dialog/todo-dialog.component'
 import { ViewPostsComponent } from './view-posts/view-posts.component';
 
 interface Solicitud {
