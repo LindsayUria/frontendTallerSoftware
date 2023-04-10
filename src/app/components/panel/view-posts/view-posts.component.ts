@@ -1,4 +1,4 @@
-import { DialogRef } from '@angular/cdk/dialog';
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -16,26 +16,32 @@ import { Component } from '@angular/core';
 
   `]
 
-
 })
 
-export class ViewPostsComponent {
+export class ViewPostsComponent   {
 
-  name!: string;
-  email!: string;
-  message!: string;
+  nameInCharge!: string;
+  paternalSurname!: string;
+  maternalSurname!: string;
+  photo!:string;
+  location!:string;
+  date!:Date;
 
-  onSubmit() {
+  titleEvent!:string;
+  descriptionEvent!: string;
+
+  onSubmit(): void {
     console.log('Formulario enviado');
-    console.log('Nombre:', this.name);
-    console.log('Email:', this.email);
-    console.log('Mensaje:', this.message);
-  }
-  constructor(
-    private dialogRef: DialogRef,
-  ){}
+    console.log('Nombre:', this.nameInCharge);
+    console.log('Apellido Paterno:', this.paternalSurname);
+    console.log('Apellido Materno', this.maternalSurname);
 
-  close(){
-    this.dialogRef.close();
   }
+  // constructor(
+  //   private dialogRef: DialogRef,
+  // ){}
+
+  // close(){
+  //   this.dialogRef.close();
+  // }
 }
