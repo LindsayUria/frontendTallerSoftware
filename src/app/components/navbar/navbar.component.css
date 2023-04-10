@@ -128,3 +128,8 @@
   background-color: #ffcc00;
   color: #004070;
 }
+
+::ng-deep .mat-menu-panel {
+  padding: 0 10px!important;
+  width: 100%!important;
+}
