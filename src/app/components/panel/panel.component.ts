@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+//import { MatDialog } from '@angular/material/dialog';
 import { Dialog } from '@angular/cdk/dialog';
 //import {TodoDialogComponent} from '../../components/todo-dialog/todo-dialog.component'
 import { ViewPostsComponent } from './view-posts/view-posts.component';
+import { bottom } from '@popperjs/core';
 
 interface Solicitud {
   numero: number;
@@ -30,9 +31,9 @@ interface Detalle{
   templateUrl: './panel.component.html',
 
   styleUrls: ['./panel.component.css'],
-  template: `
-    <button class="btn-view-Detail" (click)="openPopup()">Ver Detalle</button>
-  `
+  // template: `
+  //   <button class="btn-view-Detail" (click)="openPopup()">Ver Detalle</button>
+  // `
 
 
 })
@@ -41,13 +42,13 @@ export class PanelComponent {
 
 
   constructor(
-    private dialog: MatDialog,
+    // private dialog: MatDialog,
     private dialog2: Dialog
     ) {}
 
-  openPopup() {
-    const dialogRef = this.dialog.open(Component);
-  }
+  // openPopup() {
+  //   const dialogRef = this.dialog.open(Component);
+  // }
 
   solicitudes: Solicitud[] = [
     {
@@ -120,12 +121,12 @@ export class PanelComponent {
   openDialog(){
     this.dialog2.open(ViewPostsComponent,{
       width: '50vw',
-      height: 'max-height',
-      data: {
-
-      },
+      height: '50vh',
+      // maxHeight: '80vh', // Aquí estableces la altura máxima
+      // overflowY: 'auto' // Agrega scroll cuando sea necesario
     });
   }
+
 
 
 

@@ -23,6 +23,12 @@
     display: block;
   }
 }
+:host {
+  max-height: 38vw;
+  overflow-y: auto;
+  padding-bottom: 100px;
+  bottom: 50px;
+}
 
 
 .panel {
