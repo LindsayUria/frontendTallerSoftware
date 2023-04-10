@@ -59,10 +59,9 @@
 
 }
 
-.tr-colum-indicadores .th-ind{
+.tr-colum-indicadores .th-ind, .th-ind-fecha, .th-ind-hora, .th-ind-detalle{
   width:20%;
   background-color: #ffcc00;
-
   border:black;
   border-radius: 1px;
   font-size: 1.2rem;
@@ -70,6 +69,21 @@
 }
 .th-ind{
   font-size: 1.2rem;
+  /*linea de las tablas*/
+}
+.th-ind-fecha{
+  font-size: 1.2rem;
+  width: 10%;
+  /*linea de las tablas*/
+}
+.th-ind-hora{
+  font-size: 1.2rem;
+  width: 10%;
+  /*linea de las tablas*/
+}
+.th-ind-detalle{
+  font-size: 1.2rem;
+  width: 15%;
   /*linea de las tablas*/
 }
 
@@ -109,6 +123,7 @@
   /*linea de las tablas*/
   padding-top: 3%;
 }
+
 
 
 

@@ -12,7 +12,7 @@ interface Solicitud {
   hora: string;
   // referencia: 'Ver detalles de la publicacion';
   referencia: string;
-  estados: 'rechazado' | 'aprobado' | 'pendiente' | 'enviado';
+  estados: 'Rechazado' | 'Aprobado' | 'Pendiente' | 'Enviado';
 }
 
 
@@ -22,7 +22,7 @@ interface Detalle{
   asunto: string;
   fecha: Date;
   hora: string;
-  estado: 'rechazado' | 'aprobado' | 'pendiente'| 'enviado';
+  estado: 'Rechazado' | 'Aprobado' | 'Pendiente'| 'Enviado';
 }
 
 @Component({
@@ -57,7 +57,7 @@ export class PanelComponent {
       fecha: new Date(2023, 2, 27),
       hora: '14:30',
       referencia: 'Ver detalles de la publicacion',
-      estados: 'pendiente',
+      estados: 'Pendiente',
     },
     {
       numero: 2,
@@ -66,7 +66,7 @@ export class PanelComponent {
       fecha: new Date(2023, 2, 28),
       hora: '10:00',
       referencia: 'Ver detalles de la publicacion',
-      estados: 'aprobado',
+      estados: 'Aprobado',
     },
     {
       numero: 3,
@@ -75,7 +75,7 @@ export class PanelComponent {
       fecha: new Date(2023, 2, 28),
       hora: '16:15',
       referencia: 'Ver detalles de la publicacion',
-      estados: 'rechazado',
+      estados: 'Rechazado',
     },
     {
       numero: 4,
@@ -84,11 +84,11 @@ export class PanelComponent {
       fecha: new Date(2023, 2, 28),
       hora: '19:55',
       referencia: 'Ver detalles de la publicacion',
-      estados: 'enviado',
+      estados: 'Enviado',
     }
   ];
 
-  cambiarEstado(solicitud: Detalle, nuevoEstado: 'rechazado' | 'aprobado' | 'pendiente'| 'enviado') {
+  cambiarEstado(solicitud: Detalle, nuevoEstado: 'Rechazado' | 'Aprobado' | 'Pendiente'| 'Enviado') {
     solicitud.estado = nuevoEstado;
   }
 
@@ -104,13 +104,13 @@ export class PanelComponent {
   getEstadoClass(estado : String): String{
 
     switch (estado) {
-      case 'aprobado':
+      case 'Aprobado':
         return 'estado-aprobado';
-      case 'rechazado':
+      case 'Rechazado':
         return 'estado-rechazado';
-      case 'pendiente':
+      case 'Pendiente':
         return 'estado-pendiente';
-      case  'enviado':
+      case  'Enviado':
         return 'estado-enviado';
       default:
         return 'black';
@@ -119,10 +119,7 @@ export class PanelComponent {
 
   openDialog(){
     this.dialog2.open(ViewPostsComponent,{
-      height: '400px',
-  width: '600px',
-  panelClass: 'my-dialog',
-
+      
     });
   }
 
