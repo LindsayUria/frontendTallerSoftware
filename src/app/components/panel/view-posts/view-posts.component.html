@@ -143,8 +143,8 @@
 
 </div>
 
-  <button type="button" class="btn btn-success" [swal]="['Oops!', 'This is not implemented yet :/', 'warning']"> Aceptar</button>
-  <button type="button" class="btn btn-danger">Rechazar</button>
+  <button type="button" class="btn btn-success" (click)="aceptada()"> Aceptar</button>
+  <button type="button" class="btn btn-danger" (click)="rechazada()">Rechazar</button>
   <button type="button" class="btn btn-warning">Solicitar Modificación</button>
 </div>
 

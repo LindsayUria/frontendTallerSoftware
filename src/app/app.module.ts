@@ -45,7 +45,6 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
     FontAwesomeModule,
     SlickCarouselModule,
     SweetAlert2Module.forRoot(),
-    SweetAlert2Module,
     
 
   ],
