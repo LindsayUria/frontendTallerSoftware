@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 
 @Component({
@@ -6,11 +6,17 @@ import { Component } from '@angular/core';
   templateUrl: './add-posts.component.html',
   styleUrls: ['./add-posts.component.css']
 })
-export class AddPostsComponent {
-  formData = {
-    titulo: '',
-    subtitulo: '',
-    descripcion: ''
-  };
+export class AddPostsComponent implements OnInit{
+  titulo: string = "";
+  subtitulo: string = "";
+  descripcion: string = "";
+  cultura: string = "";
+  
+
+
+  constructor(){}
+  ngOnInit(): void {
+      
+  }
 
 }
