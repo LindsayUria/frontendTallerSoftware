@@ -17,6 +17,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { AddEventsComponent } from './components/add-events/add-events.component';
 import { ViewPostsComponent } from './components/panel/view-posts/view-posts.component';
 import { ImageSliderComponent } from './image-slider/image-slider.component';
+import { SesionComponent } from './layout/publico/sesion/sesion.component';
+import { ContenidoComponent } from './layout/privado/contenido/contenido.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { ImageSliderComponent } from './image-slider/image-slider.component';
     AddEventsComponent,
     ViewPostsComponent,
     ImageSliderComponent,
-
+    SesionComponent,
+    ContenidoComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,9 +46,8 @@ import { ImageSliderComponent } from './image-slider/image-slider.component';
     AppRoutingModule,
     FontAwesomeModule,
     SlickCarouselModule,
-
   ],
-
+  
   providers: [],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
