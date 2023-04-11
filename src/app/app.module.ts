@@ -17,6 +17,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { AddEventsComponent } from './components/add-events/add-events.component';
 import { ViewPostsComponent } from './components/panel/view-posts/view-posts.component';
 import { ImageSliderComponent } from './image-slider/image-slider.component';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,9 @@ import { ImageSliderComponent } from './image-slider/image-slider.component';
     AppRoutingModule,
     FontAwesomeModule,
     SlickCarouselModule,
+    SweetAlert2Module.forRoot(),
+    SweetAlert2Module,
+    
 
   ],
 

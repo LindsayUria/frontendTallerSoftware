@@ -1,10 +1,13 @@
 
 import { Component } from '@angular/core';
+import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-view-posts',
   templateUrl: './view-posts.component.html',
   styleUrls: ['./view-posts.component.css',
+  
   ],
   styles: [` :host {
     display: block;
@@ -45,4 +48,22 @@ export class ViewPostsComponent   {
   // close(){
   //   this.dialogRef.close();
   // }
+  
 }
+const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 3000,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.addEventListener('mouseenter', Swal.stopTimer)
+    toast.addEventListener('mouseleave', Swal.resumeTimer)
+  }
+})
+
+Toast.fire({
+  icon: 'success',
+  title: 'Signed in successfully'
+})
+

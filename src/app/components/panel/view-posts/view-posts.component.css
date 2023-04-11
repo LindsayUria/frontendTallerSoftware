@@ -154,3 +154,10 @@ input, textarea {
   text-align: center;
 }
 
+.alerta{
+  position: fixed;
+  max-width: 500px;
+  top: 55px;
+  right: 24px;
+}
+
