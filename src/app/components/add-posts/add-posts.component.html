@@ -14,15 +14,15 @@
             <form>
               <div class="mb-3">
                 <label for="titlePost" class="form-label">Título</label>
-                <input type="text" class="form-control" id="titlePost" placeholder="Agregue el título de la publicación">
+                <input type="text" [(ngModel)]="formData.titulo" class="form-control" id="titlePost" placeholder="Agregue el título de la publicación">
               </div>
               <div class="mb-3">
                 <label for="subtitlePost" class="form-label">Subtítulo</label>
-                <input type="text" class="form-control" id="subtitlePost" placeholder="Agregue el subtítulo de la publicación">
+                <input type="text" [(ngModel)]="formData.subtitulo" class="form-control" id="subtitlePost" placeholder="Agregue el subtítulo de la publicación">
               </div>
               <div class="mb-3">
                 <label for="descriptionPost" class="form-label">Descripción</label>
-                <textarea class="form-control" id="descriptionPost" rows="5" placeholder="Agregue la descripción de la publicación"></textarea>
+                <textarea [(ngModel)]="formData.descripcion" class="form-control" id="descriptionPost" rows="5" placeholder="Agregue la descripción de la publicación"></textarea>
               </div>
               <div class="mb-3">
                 <label for="imagesPost" class="form-label">Subir Imágenes</label>
@@ -46,7 +46,11 @@
             <h2>Vista Previa</h2>
           </figure>
           <mat-card-content>
-              <p>Some content</p>
+            <div>
+              <h2> {{formData.titulo}} </h2>
+              <h3> {{formData.subtitulo}} </h3>
+              <p> {{formData.descripcion}} </p>
+            </div>
           </mat-card-content>
         </mat-card>
       </div>

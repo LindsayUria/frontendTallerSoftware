@@ -10,7 +10,10 @@ import { AutentifacionService } from './shared/servicios/autentifacion.service';
 })
 export class AppComponent {
   title = 'frontend';
+
   constructor(private loginPrd:AutentifacionService){
 
   }
+
+
 }

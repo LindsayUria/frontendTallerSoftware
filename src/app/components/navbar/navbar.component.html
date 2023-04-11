@@ -47,12 +47,22 @@
 <mat-toolbar class="nav" color="primary">
   <mat-toolbar-row>
     <button class="btn-inicio" mat-button>Inicio</button>
+<<<<<<< HEAD
     <button class="btn-item" mat-button routerLink="/panel">Panel</button>
     <button class="btn-item" mat-button>Quienes Somos?</button>
+=======
+    <button class="btn-item" mat-button routerLink="/panel" >Panel</button>
+    <button class="btn-item" mat-button>Quienes Somos</button>
+>>>>>>> origin2/login
     <button class="btn-item" mat-button>Blog</button>
     <button class="btn-item" mat-button>Contacto</button>
+    <button class="btn-item" mat-button [matMenuTriggerFor]="menu">Formularios</button>
+    <mat-menu  #menu="matMenu">
+      <button mat-menu-item routerLink="/add-events"> Eventos </button>
+      <button mat-menu-item routerLink="/add-posts"> Publicaciones </button>
+    </mat-menu>
     <span class="spacer"></span>
-    <button mat-icon-button>
+    <button class="btn-item" mat-icon-button>
       <mat-icon>search</mat-icon>
     </button>
   </mat-toolbar-row>
