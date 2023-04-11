@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms'; // importa FormsModule
+import { FormsModule,  ReactiveFormsModule} from '@angular/forms'; // importa FormsModule
 import { AppComponent } from './app.component';
 import { AddPostsComponent } from './components/add-posts/add-posts.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -35,6 +35,7 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
@@ -45,7 +46,7 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
     FontAwesomeModule,
     SlickCarouselModule,
     SweetAlert2Module.forRoot(),
-    
+
 
   ],
 
