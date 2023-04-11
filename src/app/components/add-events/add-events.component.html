@@ -36,19 +36,19 @@
 
               <div class="mb-3">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Presencial" [(ngModel)]="selectedModality">
                   <label class="form-check-label" for="inlineRadio1">Presencial</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Virtual" [(ngModel)]="selectedModality">
                   <label class="form-check-label" for="inlineRadio2">Virtual</label>
                 </div>
               </div>
-              <div class="mb-3">
+              <div class="mb-3" *ngIf="selectedModality === 'Presencial'">
                 <label for="location" class="form-label">Agregar Ubicación</label>
                 <input type="text" class="form-control" id="location" placeholder="Agregue la ubicación del evento">
               </div>
-              <div class="mb-3">
+              <div class="mb-3" *ngIf="selectedModality === 'Virtual'">
                 <label for="location" class="form-label">Agregar Link del Evento</label>
                 <input type="text" class="form-control" id="location" placeholder="Agregue el link del evento">
               </div>
@@ -151,16 +151,16 @@
               <h4>Alcance</h4>
               <div class="row">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                  <label class="form-check-label" for="inlineRadio1">Edad</label>
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="scope1" value="Edad" [(ngModel)]="selectedScope">
+                  <label class="form-check-label" for="scope1">Edad</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                  <label class="form-check-label" for="inlineRadio2">Público</label>
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="scope2" value="Público" [(ngModel)]="selectedScope">
+                  <label class="form-check-label" for="scope2">Público</label>
                 </div>
               </div>
               <div class="row">
-                <div class="col-6">
+                <div class="col-6" *ngIf="selectedScope === 'Edad'">
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="age1">
                     <label class="form-check-label" for="age1">
@@ -174,13 +174,13 @@
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="age2">
-                    <label class="form-check-label" for="age2">
+                    <input class="form-check-input" type="checkbox" value="" id="age3">
+                    <label class="form-check-label" for="age3">
                       60 - 99
                     </label>
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-6" *ngIf="selectedScope === 'Público'">
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="student">
                     <label class="form-check-label" for="student">
