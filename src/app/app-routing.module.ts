@@ -21,6 +21,12 @@ const routes: Routes = [
   { path: 'panel',        component: PanelComponent},
   { path: 'view-posts', component: ViewPostsComponent},
   {
+    path:'edit-profile',component:EditProfileComponent
+  },
+  {
+    path:'select-interest',component:SelectInterestComponent
+  },
+  {
     path:'sinsesion',component:SesionComponent,loadChildren:()=>import('./modules/login/login.module').then(m=>m.loginModule)
   },
   {
@@ -28,12 +34,6 @@ const routes: Routes = [
   },
   {
     path:"**",redirectTo:'sinsesion/login'
-  },
-  {
-    path:'edit-profile',component:EditProfileComponent
-  },
-  {
-    path:'select-interest',component:SelectInterestComponent
   }];
  // { path: '', redirectTo: '/inicio', pathMatch: 'full' },
 
