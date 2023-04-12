@@ -46,14 +46,14 @@
               </div>
               <div class="mb-3" *ngIf="selectedModality === 'Presencial'">
                 <label for="location" class="form-label">Agregar Ubicación</label>
-                <input type="text" class="form-control" id="location" placeholder="Agregue la ubicación del evento">
+                <input #linklugar type="text" class="form-control" id="location" placeholder="Agregue la ubicación del evento" formControlName="linklugar" [(ngModel)]="lldata">
               </div>
               <div class="mb-3" *ngIf="selectedModality === 'Virtual'">
                 <label for="location" class="form-label">Agregar Link del Evento</label>
-                <input type="text" class="form-control" id="link" placeholder="Agregue el link del evento">
+                <input #linklugar type="text" class="form-control" id="link" placeholder="Agregue el link del evento" formControlName="linklugar" [(ngModel)]="lldata" >
               </div>
               <div class="d-grid gap-2">
-                <button class="btn btn-success" type="submit" (click)="postEvent(titlePost.value, descriptionPost.value)">Agregar Publicación</button>
+                <button class="btn btn-success" type="submit" (click)="postEvent(titlePost.value, descriptionPost.value, lldata)">Agregar Publicación</button>
               </div>
             </form>
           </mat-card-content>
@@ -84,7 +84,7 @@
               <div class="row">
                 <div class="col-6">
                   <div class="form-check" *ngFor="let or of category; let i=index">
-                    <input class="form-check-input" type="checkbox" value="" >
+                    <input class="form-check-input" type="checkbox" value="{{or.nombre_interes}}" (change)="addCategory(or)" >
                     <label class="form-check-label">
                       {{or.nombre_interes}}
                     </label>
@@ -214,7 +214,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-primary">Agregar</button>
+          <button type="button" class="btn btn-primary" (click)="printcategoryaus()">Agregar</button>
         </div>
       </div>
     </div>

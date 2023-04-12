@@ -16,7 +16,9 @@ export class AddEventsComponent implements OnInit {
   selectedScope: string = "";
 
   category: Category[]=[];
+  categoryaux: Category[]=[];
   nevent: Event=new Event();
+  lldata!: string;
   constructor(private categoryService:CategoryService, private eventService:EventService){}
 
   public newEventForm = new FormGroup({
@@ -25,6 +27,7 @@ export class AddEventsComponent implements OnInit {
     descriptionPost: new FormControl('', Validators.required),
     //modality: new FormControl('', Validators.required),
     //scope: new FormControl('', Validators.required),
+    linklugar: new FormControl('', Validators.required),
   });
 
   async addNewEvent(data: any){
@@ -50,16 +53,37 @@ export class AddEventsComponent implements OnInit {
           console.log(error);
         });
   }
+  printcategoryaus(){
+    console.log(this.categoryaux);
+  }
+  addCategory(cat:Category){
+    if(this.categoryaux.find(element => element == cat)){
+      this.delCategory(cat);
+    }else{
+      this.categoryaux.push(cat);
+    }
+  }
+  delCategory(cat:Category){
+    this.categoryaux=this.categoryaux.filter((item) => item !== cat);
+  }
 
-  postEvent(titulo:string, descripcion:string ){
+  postEvent(titulo:string, descripcion:string, lldata:string){
     this.nevent.ep_id=0;
     this.nevent.titulo=titulo;
     this.nevent.descripcion=descripcion;
     this.nevent.id_imagen='test';
-    this.nevent.lugar='';
-    this.nevent.link='';
+    if (this.selectedModality==='Presencial'){
+      this.nevent.lugar=lldata;
+      this.nevent.link='';
+    }else {
+      this.nevent.lugar='';
+      this.nevent.link=lldata;
+    }
     //this.nevent.categoriaDTOS=this.category;
-    this.nevent.categoriaDTOS=[];
+    //this.nevent.categoriaDTOS=this.categoryaux;  
+    this.nevent.categoriaDTOS=[]
+
+    console.log(this.nevent.categoriaDTOS);
     console.log(this.nevent);
     this.eventService.postTarjeta(this.nevent).subscribe({
       next:() => {
