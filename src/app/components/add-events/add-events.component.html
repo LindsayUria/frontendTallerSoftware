@@ -83,12 +83,13 @@
               <h4>Añadir Categorias</h4>
               <div class="row">
                 <div class="col-6">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="culture">
-                    <label class="form-check-label" for="culture">
-                      Cultura
+                  <div class="form-check" *ngFor="let or of category; let i=index">
+                    <input class="form-check-input" type="checkbox" value="" >
+                    <label class="form-check-label">
+                      {{or.nombre_interes}}
                     </label>
                   </div>
+                  <!--
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="art">
                     <label class="form-check-label" for="art">
@@ -127,6 +128,7 @@
                       Otro
                     </label>
                   </div>
+                  -->
                 </div>
               </div>
               <h4>Categorías más utilizadas</h4>

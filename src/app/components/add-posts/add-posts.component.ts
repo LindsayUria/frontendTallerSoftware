@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {CategoryService} from "../../services/category.service";
+import {Category} from "../../models/category";
 
 
 @Component({
@@ -30,10 +32,24 @@ export class AddPostsComponent implements OnInit{
   administrativo: string = "";
 
 
-  
-  constructor(){}
+  category: Category[]=[];
+  constructor(private categoryService:CategoryService){}
   ngOnInit(): void {
-      
+    this.getCategory();
+  }
+
+  getCategory(){
+    console.log('Categorys');
+
+    this.categoryService.getCategory().subscribe(
+      data => {
+        this.category = data;
+        console.log('data');
+        console.log(this.category);
+      },
+      error => {
+        console.log(error);
+      });
   }
 
 }

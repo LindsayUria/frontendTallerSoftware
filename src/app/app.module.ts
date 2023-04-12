@@ -1,5 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { AppRoutingModule } from './app-routing.module';
@@ -34,6 +35,7 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -45,7 +47,7 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
     FontAwesomeModule,
     SlickCarouselModule,
     SweetAlert2Module.forRoot(),
-    
+
 
   ],
 
