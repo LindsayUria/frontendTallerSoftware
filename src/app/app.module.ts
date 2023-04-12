@@ -19,6 +19,7 @@ import { AddEventsComponent } from './components/add-events/add-events.component
 import { ViewPostsComponent } from './components/panel/view-posts/view-posts.component';
 import { ImageSliderComponent } from './image-slider/image-slider.component';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { UserPanelComponent } from './components/user-panel/user-panel.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
     AddEventsComponent,
     ViewPostsComponent,
     ImageSliderComponent,
+    UserPanelComponent,
 
   ],
   imports: [
