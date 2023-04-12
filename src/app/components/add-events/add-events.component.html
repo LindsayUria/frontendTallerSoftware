@@ -36,11 +36,11 @@
 
               <div class="mb-3">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Presencial" [(ngModel)]="selectedModality">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Presencial" [(ngModel)]="selectedModality" [ngModelOptions]="{standalone: true}">
                   <label class="form-check-label" for="inlineRadio1">Presencial</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Virtual" [(ngModel)]="selectedModality">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Virtual" [(ngModel)]="selectedModality" [ngModelOptions]="{standalone: true}">
                   <label class="form-check-label" for="inlineRadio2">Virtual</label>
                 </div>
               </div>
@@ -50,7 +50,7 @@
               </div>
               <div class="mb-3" *ngIf="selectedModality === 'Virtual'">
                 <label for="location" class="form-label">Agregar Link del Evento</label>
-                <input type="text" class="form-control" id="location" placeholder="Agregue el link del evento">
+                <input type="text" class="form-control" id="link" placeholder="Agregue el link del evento">
               </div>
               <div class="d-grid gap-2">
                 <button class="btn btn-success" type="submit">Agregar Publicación</button>
