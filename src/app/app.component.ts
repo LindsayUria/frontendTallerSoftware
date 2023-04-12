@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 //import { TodoDialogComponent } from './components/todo-dialog/todo-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
+import { AutentifacionService } from './shared/servicios/autentifacion.service';
 
 
 @Component({
@@ -10,6 +11,15 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class AppComponent {
   title = 'frontend';
+<<<<<<< HEAD
   
   
+=======
+
+  constructor(private loginPrd:AutentifacionService){
+
+  }
+
+
+>>>>>>> login
 }

@@ -18,8 +18,10 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { AddEventsComponent } from './components/add-events/add-events.component';
 import { ViewPostsComponent } from './components/panel/view-posts/view-posts.component';
 import { ImageSliderComponent } from './image-slider/image-slider.component';
-import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
-import { UserPanelComponent } from './components/user-panel/user-panel.component';
+import { SesionComponent } from './layout/publico/sesion/sesion.component';
+import { ContenidoComponent } from './layout/privado/contenido/contenido.component';
+import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
+import { SelectInterestComponent } from './components/edit-profile/select-interest/select-interest.component';
 
 @NgModule({
   declarations: [
@@ -32,8 +34,10 @@ import { UserPanelComponent } from './components/user-panel/user-panel.component
     AddEventsComponent,
     ViewPostsComponent,
     ImageSliderComponent,
-    UserPanelComponent,
-
+    SesionComponent,
+    ContenidoComponent,
+    EditProfileComponent,
+    SelectInterestComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,11 +53,8 @@ import { UserPanelComponent } from './components/user-panel/user-panel.component
     AppRoutingModule,
     FontAwesomeModule,
     SlickCarouselModule,
-    SweetAlert2Module.forRoot(),
-
-
   ],
-
+  
   providers: [],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
