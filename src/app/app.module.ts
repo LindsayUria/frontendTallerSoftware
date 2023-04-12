@@ -19,6 +19,8 @@ import { ViewPostsComponent } from './components/panel/view-posts/view-posts.com
 import { ImageSliderComponent } from './image-slider/image-slider.component';
 import { SesionComponent } from './layout/publico/sesion/sesion.component';
 import { ContenidoComponent } from './layout/privado/contenido/contenido.component';
+import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
+import { SelectInterestComponent } from './components/edit-profile/select-interest/select-interest.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { ContenidoComponent } from './layout/privado/contenido/contenido.compone
     ImageSliderComponent,
     SesionComponent,
     ContenidoComponent,
+    EditProfileComponent,
+    SelectInterestComponent,
   ],
   imports: [
     BrowserModule,

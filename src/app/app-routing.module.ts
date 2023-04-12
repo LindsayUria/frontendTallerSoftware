@@ -7,6 +7,9 @@ import { AddEventsComponent } from './components/add-events/add-events.component
 import { ViewPostsComponent } from './components/panel/view-posts/view-posts.component';
 import { PermisosRutasService } from './core/permisosRutas/permisos-rutas.service';
 import { ContenidoComponent } from './layout/privado/contenido/contenido.component';
+import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
+import { SelectInterestComponent } from './components/edit-profile/select-interest/select-interest.component';
+
 
 import { SesionComponent } from './layout/publico/sesion/sesion.component';
 
@@ -25,6 +28,12 @@ const routes: Routes = [
   },
   {
     path:"**",redirectTo:'sinsesion/login'
+  },
+  {
+    path:'edit-profile',component:EditProfileComponent
+  },
+  {
+    path:'select-interest',component:SelectInterestComponent
   }];
  // { path: '', redirectTo: '/inicio', pathMatch: 'full' },
 

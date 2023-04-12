@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AutentifacionService } from 'src/app/shared/servicios/autentifacion.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -50,6 +52,13 @@ export class NavbarComponent implements OnInit {
     dots: true,
     arrows: true
   };
+
+  constructor(private aut:AutentifacionService,private router:Router) { }
+
+  public cerrarSesion(){
+    this.aut.limpiarToken();
+    this.router.navigateByUrl("/sinsesion/login");
+}
 
 
 }

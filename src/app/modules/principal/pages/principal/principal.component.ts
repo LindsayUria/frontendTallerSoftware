@@ -14,7 +14,7 @@ export class PrincipalComponent implements OnInit {
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
-
+ 
   public cerrarSesion(){
       this.aut.limpiarToken();
       this.router.navigateByUrl("/sinsesion/login");
