@@ -7,5 +7,5 @@ export class Event{
   id_imagen!: string;
   lugar!: string;
   link!: string;
-  evento_publicacion_tipo_id_eptipo: Category[] = [];
+  categoriaDTOS: Category[] = [];
 }
