@@ -11,15 +11,10 @@ import { AutentifacionService } from './shared/servicios/autentifacion.service';
 })
 export class AppComponent {
   title = 'frontend';
-<<<<<<< HEAD
-  
-  
-=======
 
   constructor(private loginPrd:AutentifacionService){
 
   }
 
 
->>>>>>> login
 }
