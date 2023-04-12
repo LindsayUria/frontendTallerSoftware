@@ -14,16 +14,16 @@
       </thead>
       <tbody>
         <tr class="tr-solicitudes" *ngFor="let solicitud of solicitudes" [ngClass]="solicitud.referencia">
-          <td class="tr-cont-num">{{ solicitud.numero }}</td>
-          <td class="tr-cont">{{ solicitud.nombre }}</td>
-          <td class="tr-cont">{{ solicitud.asunto }}</td>
-          <td class="tr-cont">{{ obtenerFecha(solicitud.fecha) }}</td>
-          <td class="tr-cont">{{ solicitud.hora }}</td>
+          <td class="tr-cont-num">{{ solicitud.solicitudid }}</td>
+          <td class="tr-cont">{{ solicitud.descripcion }}</td>
+          <!-- <td class="tr-cont">{{ solicitud.asunto }}</td> -->
+          <!-- <td class="tr-cont">{{ obtenerFecha(solicitud.fecha) }}</td>
+          <td class="tr-cont">{{ solicitud.hora }}</td> -->
 
           <!–- Cambie openPopup() por openDialog –->
 
           <td><button class="btn-view-Detail" (click)="openDialog()">Ver Detalle</button></td>
-          <td [ngClass]="getEstadoClass(solicitud.estados)">{{solicitud.estados}}</td>
+          <td [ngClass]="getEstadoClass(solicitud.estado)">{{solicitud.estado}}</td>
 
 
 

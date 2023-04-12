@@ -1,5 +1,6 @@
 
-import { Component } from '@angular/core';
+import { PreviewService } from 'src/app/services/preview.service';
+import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
 
 
@@ -15,6 +16,7 @@ import Swal from 'sweetalert2';
     border-radius: 4px;
     padding: 16px;
     width:50vw;
+    height:33vw;
 
   }
 
@@ -22,7 +24,22 @@ import Swal from 'sweetalert2';
 
 })
 
-export class ViewPostsComponent   {
+export class ViewPostsComponent   implements OnInit{
+
+  constructor(private previewService: PreviewService){
+    console.log('El componente se a creado');
+  }
+
+  ngOnInit(): void {
+      console.log('El componente se ha inicializado');
+      this.previewService.GetSolicitud()
+      .subscribe(Response => {
+        this.preview = Response
+     });
+  }
+
+  preview: any = []
+
 
   nameInCharge!: string;
   paternalSurname!: string;
@@ -36,9 +53,9 @@ export class ViewPostsComponent   {
 
   onSubmit(): void {
     console.log('Formulario enviado');
-    console.log('Nombre:', this.nameInCharge);
-    console.log('Apellido Paterno:', this.paternalSurname);
-    console.log('Apellido Materno', this.maternalSurname);
+    // console.log('Nombre:', this.nameInCharge);
+    // console.log('Apellido Paterno:', this.paternalSurname);
+    // console.log('Apellido Materno', this.maternalSurname);
 
   }
   // constructor(
@@ -84,8 +101,3 @@ export class ViewPostsComponent   {
   }
   
 }
-
-
-
-
-

@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { PanelService } from 'src/app/services/panel.service';
+import { Component, OnInit } from '@angular/core';
 //import { MatDialog } from '@angular/material/dialog';
 import { Dialog } from '@angular/cdk/dialog';
 //import {TodoDialogComponent} from '../../components/todo-dialog/todo-dialog.component'
 import { ViewPostsComponent } from './view-posts/view-posts.component';
 import { bottom } from '@popperjs/core';
+
 
 interface Solicitud {
   numero: number;
@@ -37,57 +39,29 @@ interface Detalle{
 
 
 })
-export class PanelComponent {
+export class PanelComponent implements OnInit{
 
 
 
-  constructor(
-    // private dialog: MatDialog,
-    private dialog2: Dialog
-    ) {}
+  
 
   // openPopup() {
   //   const dialogRef = this.dialog.open(Component);
   // }
+  constructor(private panelService: PanelService, private dialog2: Dialog){
+    console.log('El componente se a creado');
+  }
 
-  solicitudes: Solicitud[] = [
-    {
-      numero: 1,
-      nombre: 'Juan Pérez',
-      asunto: 'Solicitud de permiso',
-      fecha: new Date(2023, 2, 27),
-      hora: '14:30',
-      referencia: 'Ver detalles de la publicacion',
-      estados: 'Pendiente',
-    },
-    {
-      numero: 2,
-      nombre: 'María Gómez',
-      asunto: 'Solicitud de vacaciones',
-      fecha: new Date(2023, 2, 28),
-      hora: '10:00',
-      referencia: 'Ver detalles de la publicacion',
-      estados: 'Aprobado',
-    },
-    {
-      numero: 3,
-      nombre: 'Pedro Rodríguez',
-      asunto: 'Solicitud de presupuesto',
-      fecha: new Date(2023, 2, 28),
-      hora: '16:15',
-      referencia: 'Ver detalles de la publicacion',
-      estados: 'Rechazado',
-    },
-    {
-      numero: 4,
-      nombre: 'Amanda Ramirez',
-      asunto: 'Solicitud de publicacion',
-      fecha: new Date(2023, 2, 28),
-      hora: '19:55',
-      referencia: 'Ver detalles de la publicacion',
-      estados: 'Enviado',
-    }
-  ];
+  ngOnInit(): void {
+      console.log('El componente se ha inicializado');
+      this.panelService.GetSolicitud()
+      .subscribe(Response => {
+        this.solicitudes = Response
+        console.log(this.solicitudes)
+     });
+  }
+
+  solicitudes: any = [];
 
   cambiarEstado(solicitud: Detalle, nuevoEstado: 'Rechazado' | 'Aprobado' | 'Pendiente'| 'Enviado') {
     solicitud.estado = nuevoEstado;
