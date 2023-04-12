@@ -7,14 +7,15 @@ export interface TableElement {
   fechaSolicitud: Date;
   fechaUltimaRevicion: Date;
   estado: string;
+  comentario: string;
 }
 
 const ELEMENT_DATA: TableElement[] = [
-  {position: 1, title: 'Hydrogen', tipo: "Evento", fechaSolicitud: new Date(2023, 2, 27), fechaUltimaRevicion: new Date(2023, 2, 27),estado: "Rechazado"},
-  {position: 2, title: 'Helium', tipo: "Evento", fechaSolicitud: new Date(2023, 2, 27), fechaUltimaRevicion: new Date(2023, 2, 27),estado: "Pendiente"},
-  {position: 3, title: 'Lithium', tipo: "Publicacion", fechaSolicitud: new Date(2023, 2, 27), fechaUltimaRevicion: new Date(2023, 7, 12),estado: "Aceptado"},
-  {position: 4, title: 'Beryllium', tipo: "Publicacion", fechaSolicitud: new Date(2023, 2, 27), fechaUltimaRevicion: new Date(2023, 2, 27),estado: "Rechazado"},
-  {position: 5, title: 'Boron', tipo: "Evento", fechaSolicitud: new Date(2023, 2, 27), fechaUltimaRevicion: new Date(2023, 5, 27),estado: "Aceptado"},
+  {position: 1, title: 'Creative Planning ', tipo: "Evento", fechaSolicitud: new Date(2023, 2, 27), fechaUltimaRevicion: new Date(2023, 2, 27),estado: "Rechazado", comentario:"Cambiar la Imagen"},
+  {position: 2, title: 'Big E Season Memories ', tipo: "Evento", fechaSolicitud: new Date(2023, 2, 27), fechaUltimaRevicion: new Date(2023, 2, 27),estado: "Pendiente",comentario:""},
+  {position: 3, title: 'Spring Now ', tipo: "Publicacion", fechaSolicitud: new Date(2023, 2, 27), fechaUltimaRevicion: new Date(2023, 7, 12),estado: "Aceptado",comentario:""},
+  {position: 4, title: 'Pomp It Mountain ', tipo: "Publicacion", fechaSolicitud: new Date(2023, 2, 27), fechaUltimaRevicion: new Date(2023, 2, 27),estado: "Rechazado",comentario:"Publicacion mal escrita, cambiar el primer parrafo"},
+  {position: 5, title: 'Occasions Reasons ', tipo: "Evento", fechaSolicitud: new Date(2023, 2, 27), fechaUltimaRevicion: new Date(2023, 5, 27),estado: "Aceptado",comentario:""},
 ];
 
 @Component({
@@ -24,7 +25,7 @@ const ELEMENT_DATA: TableElement[] = [
 })
 export class UserPanelComponent {
 
-  displayedColumns: string[] = ['position', 'title', 'tipo', 'fechaSolicitud', 'fechaUltimaRevicion', 'estado'];
+  displayedColumns: string[] = ['position', 'title', 'tipo', 'fechaSolicitud', 'fechaUltimaRevicion', 'estado', 'comentario'];
   dataSource = ELEMENT_DATA;
 
   obtenerFecha(fecha: Date): string {
