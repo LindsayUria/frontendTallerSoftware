@@ -22,6 +22,7 @@ import { SesionComponent } from './layout/publico/sesion/sesion.component';
 import { ContenidoComponent } from './layout/privado/contenido/contenido.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { SelectInterestComponent } from './components/edit-profile/select-interest/select-interest.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { SelectInterestComponent } from './components/edit-profile/select-intere
     AppRoutingModule,
     FontAwesomeModule,
     SlickCarouselModule,
+    MatSnackBarModule,
   ],
   
   providers: [],
