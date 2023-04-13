@@ -1,9 +1,8 @@
 <nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-      <!-- <img style="width: 40px;
-      border-radius: 50%;" [src]="objetounico.picture" alt="" srcset=""> -->
-      <a class="navbar-brand" href="#">Bienvenido {{objetounico.given_name!}}</a>
-      
-    </div>
-  </nav>
+  <div class="container-fluid">
+    <!-- <img style="width: 40px;
+    border-radius: 50%;" [src]="objetounico.picture" alt="" srcset=""> -->
+    <a class="navbar-brand rounded-pill animate  p-3 w-auto" href="#" style="color: #19365c; background-color: #f7de7c; box-shadow: 5px 5px 5px rgba(0,0,0,0.5);"><b>Bienvenido: </b> <span class="animate">{{objetounico.name}}</span></a>
+  </div>
+</nav>
 <router-outlet></router-outlet>

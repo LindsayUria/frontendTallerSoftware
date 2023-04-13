@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit,AfterViewInit {
     });
     google.accounts.id.renderButton(
       document.getElementById("buttonDiv"),
-      { theme: "outline", size: "large" }  // customization attributes
+      { theme: "outline", size: "large", buttonClass: "google-login-btn"  }  // customization attributes
     );
     google.accounts.id.prompt(); // also display the One Tap dialog
   }
